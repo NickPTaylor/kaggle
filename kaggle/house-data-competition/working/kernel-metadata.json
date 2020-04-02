@@ -1,0 +1,17 @@
+{
+  "id": "nickptaylor/housing-prices-competition",
+  "id_no": 8718752,
+  "title": "Housing Prices Competition",
+  "code_file": "housing-prices-competition.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "home-data-for-ml-course"
+  ]
+}
