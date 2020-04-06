@@ -1,0 +1,8 @@
+NAME=home-data-for-ml-course
+
+kaggle competitions download $NAME
+if [ ! -d "input" ]; then
+    mkdir input
+fi
+unzip home-data-for-ml-course.zip -d input/$NAME
+rm $NAME.zip

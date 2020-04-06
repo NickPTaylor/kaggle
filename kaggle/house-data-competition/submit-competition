@@ -1,0 +1,6 @@
+NAME=home-data-for-ml-course
+if [ -z "$1" ]; then
+  echo "ERROR: Please write a submission message"
+  exit 1
+fi
+kaggle competitions submit $NAME -f working/output/submission.csv -m "$1"
