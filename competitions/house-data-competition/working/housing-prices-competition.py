@@ -28,12 +28,12 @@ test_data_path = input_dir / 'test.csv'
 #%%
 
 # Load data sets
-train_df = pd.read_csv(train_data_path)
+train_df = pd.read_csv(train_data_path, index_col='Id')
 
 X_train = train_df.drop('SalePrice', axis=1)
 y_train = train_df['SalePrice']
 
-X_test = pd.read_csv(test_data_path)
+X_test = pd.read_csv(test_data_path, index_col='Id')
 
 #%%
 
@@ -104,5 +104,5 @@ X_test = X_test[num_cols + cat_cols]
 y_test_pred = pl.predict(X_test)
 
 # Create submission file.
-output = pd.DataFrame(dict(id=X_test.Id, SalePrice=y_test_pred))
+output = pd.DataFrame(dict(id=X_test.index, SalePrice=y_test_pred))
 output.to_csv(output_dir / 'submission.csv', index=False)
